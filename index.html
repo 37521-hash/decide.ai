@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Decide.AI</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0a0a'/%3E%3Crect x='7' y='7' width='8' height='18' fill='%23ededed'/%3E%3Crect x='17' y='7' width='8' height='18' fill='%23ff6a1a'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><div class="wrap">
+ <a class="brand" href="#" aria-label="Decide.AI"><span class="mark" aria-hidden="true"><i></i><i></i></span>Decide.AI</a>
+ <small>Versão 1.0 (ainda indecisa)</small>
+</div></header>
+
+<main class="wrap">
+<section class="hero">
+ <h1>Duas opções entram. A que você já queria sai.</h1>
+ <p>Informe as duas e a gente cuida da análise. Leva quinze minutos, e a conclusão é a mesma que você teria tirado em um.</p>
+</section>
+
+<section class="panel" aria-label="Decisão">
+ <div id="form" class="fade in">
+  <div class="pair">
+   <div><label for="a">Opção A</label><input type="text" id="a" placeholder="Pizza" autocomplete="off"></div>
+   <div class="sep" aria-hidden="true"><span>ou</span></div>
+   <div><label for="b">Opção B</label><input type="text" id="b" placeholder="Hambúrguer" autocomplete="off"></div>
+  </div>
+  <div class="foot">
+   <button class="sw" id="demo" role="switch" aria-checked="false" type="button">
+    <span class="track" aria-hidden="true"></span>
+    <span>Modo apresentação<small>15 segundos em vez de 15 minutos</small></span>
+   </button>
+   <button class="btn" id="start" type="button">Decidir por mim</button>
+  </div>
+  <p id="err" role="alert"></p>
+ </div>
+
+ <div id="run" class="fade hidden" aria-live="polite">
+  <div class="top"><span>Analisando</span><span id="pct">0%</span></div>
+  <div class="clock" id="eta" aria-label="Tempo restante">15:00</div>
+  <div class="line" role="progressbar" aria-label="Progresso da análise"><i id="fill"></i></div>
+  <ul class="log" id="log"></ul>
+  <div class="foot" style="margin-top:20px">
+   <span id="skipmsg" style="font-size:14px;color:var(--muted)"></span>
+   <button class="btn2" id="skip" type="button">Pular análise (Premium, R$ 9,90/mês)</button>
+  </div>
+ </div>
+
+ <div id="res" class="fade hidden" aria-live="polite">
+  <div class="verdict">Decisão final</div>
+  <div class="win" id="winner"></div>
+  <p class="sub" id="why"></p>
+  <div class="att" id="att"></div>
+  <button class="btn" id="again" type="button">Decidir outra coisa</button>
+ </div>
+</section>
+
+<section class="ed">
+ <h2>O problema<small>Por que isso existe</small></h2>
+ <div>
+  <p>Você pergunta “pizza ou hambúrguer?” para um amigo, ouve “tanto faz” e fica no mesmo lugar. A dúvida raramente é falta de informação.</p>
+  <p>Quase sempre você já sabe o que quer. Só falta alguém, ou alguma coisa, concordar com cara de seriedade.</p>
+ </div>
+</section>
+
+<section class="ed">
+ <h2>A solução<small>Como funciona</small></h2>
+ <dl>
+  <div><dt>Análise demorada</dt><dd>Etapas de processamento sérias e totalmente desnecessárias, com contagem regressiva e tudo.</dd></div>
+  <div><dt>Leitura da intenção</dt><dd>O sistema observa onde você clicou, digitou e demorou mais. A opção com mais atenção vence.</dd></div>
+  <div><dt>Veredito justificado</dt><dd>O resultado vem com os números, para você agir com confiança no que já ia fazer.</dd></div>
+ </dl>
+</section>
+
+<section class="ed">
+ <h2>Planos<small>Como a gente se mantém</small></h2>
+ <dl>
+  <div><dt>Grátis</dt><dd><b>R$ 0.</b> Decisões em 15 minutos, com anúncios de coisas que você já ia comprar.</dd></div>
+  <div><dt>Premium</dt><dd><b>R$ 9,90/mês.</b> Pule a espera. A decisão continua a mesma.</dd></div>
+  <div><dt>Premium Plus</dt><dd><b>R$ 19,90/mês.</b> A IA diz “eu sabia” depois do resultado.</dd></div>
+  <div><dt>Empresas</dt><dd><b>Sob consulta.</b> Reuniões decididas por IA, para o chefe aprovar o que já escolheu.</dd></div>
+ </dl>
+</section>
+
+<section class="ed">
+ <h2>Para quem<small>Público e slogan</small></h2>
+ <div>
+  <p>Pessoas indecisas, grupos de amigos que não escolhem o restaurante e qualquer um que já decidiu, mas quer uma segunda opinião que concorde.</p>
+  <p>A gente demora, você confirma.</p>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+ <span>Decide.AI, projeto “Startup Impossível”</span>
+ <span>Nenhuma IA de verdade foi consultada durante a espera.</span>
+</div></footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
